@@ -9,7 +9,7 @@ The API is incredibly simple:
 # We'll use self() for now...
 Evac.setup(self())
 
-# Now if the process is sent the SIGINT message (Like from pressing Ctrl-C)
+# Now if the VM process is sent the SIGINT message (Like from pressing Ctrl-C)
 # we can do something with it
 
 receive do

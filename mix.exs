@@ -15,6 +15,17 @@ defmodule Evac.MixProject do
       version: "0.1.0",
       elixir: "~> 1.13",
       start_permanent: Mix.env() == :prod,
+      deps: deps(),
+      docs: [
+        main: "README",
+        extras: ["README.md"]
+      ]
+    ]
+  end
+
+  def deps do
+    [
+      {:ex_doc, "~> 0.28", only: :dev, runtime: false}
     ]
   end
 end
