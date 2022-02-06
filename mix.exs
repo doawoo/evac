@@ -1,6 +1,6 @@
 defmodule Mix.Tasks.Compile.Nif do
   def run(_args) do
-    {result, _errcode} = System.cmd("make", [])
+    {result, _errcode} = System.cmd("elixir", ["./make.exs"])
     IO.binwrite(result)
   end
 end

@@ -6,6 +6,14 @@ src_files = [
 
 ####
 
+try do
+  System.cmd("zig", ["version"])
+rescue
+  _ ->
+    IO.puts("ERROR: We use `zig` as a cross-platform C compiler, please install the latest release, and ensure it's in your path!")
+    System.halt(1)
+end
+
 ext_name = case :os.type() do
   {:win32, _} -> "dll"
   _ -> "so"
