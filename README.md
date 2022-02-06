@@ -1,5 +1,12 @@
 # Evac
 
+### Requirements
+
+* Zig is used as a cross-platform C compiler for the NIF, please install the latest master release (0.10.0+)
+* Elixir 1.12+
+
+### What Is It?
+
 Evac is a simple C NIF for Elixir/Erlang that catches `SIGINT`.
 
 The API is incredibly simple:
