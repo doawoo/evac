@@ -11,15 +11,17 @@ defmodule Evac.MixProject do
   def project do
     [
       app: :evac,
+      package: [
+        licenses: ["MIT"],
+        links: %{"Github" => "https://github.com/doawoo/evac"},
+      ],
+      description: "A simple way to catch SIGINT in Elixir.",
       compilers: [:nif] ++ Mix.compilers,
-      version: "0.1.0",
-      elixir: "~> 1.13",
+      version: "0.1.1",
+      elixir: "~> 1.12",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
-      docs: [
-        main: "README",
-        extras: ["README.md"]
-      ]
+      docs: [main: "readme", extras: ["README.md"]]
     ]
   end
 

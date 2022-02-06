@@ -1,5 +1,7 @@
 # Evac
 
+[![Hex.pm](https://img.shields.io/hexpm/v/evac.svg)](https://hex.pm/packages/evac)
+
 ### Requirements
 
 * Zig is used as a cross-platform C compiler for the NIF, please install the latest master release (0.10.0+)
