@@ -34,7 +34,7 @@ ERL_NIF_TERM setup(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[])
 }
 
 static ErlNifFunc nif_funcs[] = {
-  {"setup", 1, setup}
+  {"setup", 1, setup, 0}
 };
 
-ERL_NIF_INIT(Elixir.Evac, nif_funcs, NULL, NULL, NULL, NULL);
+ERL_NIF_INIT(Elixir.Evac, nif_funcs, NULL, NULL, NULL, NULL)
