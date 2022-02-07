@@ -9,7 +9,8 @@ defmodule Evac do
   """
   @spec init :: :ok
   def init do
-    :ok = :erlang.load_nif('./priv/evac_nif', 0)
+    nif = :code.priv_dir(:evac) ++ ['/evac_nif']
+    :ok = :erlang.load_nif(nif, 0)
   end
 
   @doc """
