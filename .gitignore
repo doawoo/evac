@@ -27,4 +27,5 @@ evac-*.tar
 
 /.elixir_ls
 /.vscode
-/priv
+/priv/*.so
+/priv/*.dll

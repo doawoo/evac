@@ -4,7 +4,6 @@
 
 ### Requirements
 
-* Zig is used as a cross-platform C compiler for the NIF, please install the latest master release (0.10.0+)
 * Elixir 1.12+
 
 ### What Is It?
