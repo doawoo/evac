@@ -16,7 +16,9 @@ defmodule Evac.MixProject do
         links: %{"Github" => "https://github.com/doawoo/evac"},
       ],
       description: "A simple way to catch SIGINT in Elixir.",
-      compilers: [:nif] ++ Mix.compilers,
+      compilers: [:elixir_make | Mix.compilers()],
+      make_targets: ["all"],
+      make_clean: ["clean"],
       version: "0.1.1",
       elixir: "~> 1.12",
       start_permanent: Mix.env() == :prod,
@@ -27,7 +29,8 @@ defmodule Evac.MixProject do
 
   def deps do
     [
-      {:ex_doc, "~> 0.28", only: :dev, runtime: false}
+      {:ex_doc, "~> 0.28", only: :dev, runtime: false},
+      {:elixir_make, "~> 0.6", runtime: false}
     ]
   end
 end
