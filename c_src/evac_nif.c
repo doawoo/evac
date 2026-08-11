@@ -23,7 +23,7 @@ ERL_NIF_TERM setup(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[])
     // Try and register our signal callback
     if(signal(SIGINT, signal_handler) == SIG_ERR)
     {
-        enif_make_int(env, 1);
+        return enif_make_int(env, 1);
     }
 
     // Assign the destination pid
